@@ -4,6 +4,7 @@ import { useQuoteCart } from '../../context/QuoteCartContext';
 import { useWhatsAppLink } from '../../hooks/useWhatsAppLink';
 import { getServiceIcon } from './categoryIcons';
 import { getAccent } from './categoryAccents';
+import { categorias } from '../../data/services';
 
 export function ServiceCard({ service, categoryId }) {
   const { addItem, isInCart } = useQuoteCart();
@@ -11,6 +12,8 @@ export function ServiceCard({ service, categoryId }) {
   const Icon = getServiceIcon(service.nome);
   const inCart = isInCart(service.id);
   const accent = getAccent(categoryId);
+  const category = categorias.find((c) => c.id === categoryId);
+  const categoryTitle = category ? category.titulo : categoryId;
 
   return (
     <article
@@ -87,7 +90,7 @@ export function ServiceCard({ service, categoryId }) {
             )}
           </button>
           <a
-            href={getServiceLink(service.nome)}
+            href={getServiceLink(service.nome, categoryTitle)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}

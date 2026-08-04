@@ -1,7 +1,9 @@
 import { Phone, Clock, Mail, MapPin } from 'lucide-react';
+import { useWhatsAppLink } from '../../hooks/useWhatsAppLink';
 
 export function Footer() {
-  const whatsappLink = 'https://wa.me/5571996171605';
+  const { getFooterLink } = useWhatsAppLink();
+  const whatsappLink = getFooterLink();
 
   return (
     <footer id="contato" className="relative border-t border-white/[0.03]">

@@ -50,24 +50,24 @@ describe('Header', () => {
 
 describe('Footer', () => {
   it('renderiza logo', () => {
-    render(<Footer />);
+    render(<Footer />, { wrapper: TestWrapper });
     const logo = screen.getByAltText(/nexa/i);
     expect(logo).toBeInTheDocument();
   });
 
   it('renderiza links rapidos', () => {
-    render(<Footer />);
+    render(<Footer />, { wrapper: TestWrapper });
     expect(screen.getByText('Links Rápidos')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /serviços/i })).toBeInTheDocument();
   });
 
   it('renderiza informacoes de contato', () => {
-    render(<Footer />);
+    render(<Footer />, { wrapper: TestWrapper });
     expect(screen.getByText('Contato')).toBeInTheDocument();
   });
 
   it('renderiza horario de funcionamento', () => {
-    render(<Footer />);
+    render(<Footer />, { wrapper: TestWrapper });
     expect(screen.getByText('Horário de Funcionamento')).toBeInTheDocument();
     expect(screen.getByText(/dom/i)).toBeInTheDocument();
     expect(screen.getByText(/seg/i)).toBeInTheDocument();
@@ -75,7 +75,7 @@ describe('Footer', () => {
   });
 
   it('renderiza copyright com ano atual', () => {
-    render(<Footer />);
+    render(<Footer />, { wrapper: TestWrapper });
     const year = new Date().getFullYear().toString();
     expect(screen.getByText(new RegExp(year))).toBeInTheDocument();
   });

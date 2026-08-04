@@ -112,7 +112,7 @@ export function ServicePage() {
             )}
           </button>
           <a
-            href={getServiceLink(service.nome)}
+            href={getServiceLink(service.nome, service.categoria)}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full flex items-center justify-center gap-2.5 h-11 rounded-xl glass hover:bg-white/[0.03] text-white font-semibold text-sm transition-all duration-300 border border-white/[0.04]"

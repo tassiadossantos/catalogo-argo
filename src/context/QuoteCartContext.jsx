@@ -46,7 +46,7 @@ export function QuoteCartProvider({ children }) {
   const generateWhatsAppMessage = () => {
     if (items.length === 0) return '';
     const serviceList = items.map((i) => i.nome).join('\n- ');
-    return `Olá! Gostaria de um orçamento para os seguintes serviços:\n\n- ${serviceList}\n\nPoderia me enviar as informações de preço e prazo?`;
+    return `Olá! Vim pelo site da Nexa e gostaria de orçamento para:\n\n- ${serviceList}\n\nPoderia me enviar preço e prazo?`;
   };
 
   const generateWhatsAppLink = () => {
@@ -55,8 +55,14 @@ export function QuoteCartProvider({ children }) {
     return `https://wa.me/5571996171605?text=${encodeURIComponent(message)}`;
   };
 
-  const generateSingleServiceLink = (serviceName) => {
-    const message = `Olá! Quero um orçamento para: ${serviceName}`;
+  const generateSingleServiceLink = (serviceName, category) => {
+    const categoryLabel = category || 'serviços';
+    const message = `Olá! Vim pelo site da Nexa e preciso de um orçamento para "${serviceName}" na categoria "${categoryLabel}". Poderia me ajudar?`;
+    return `https://wa.me/5571996171605?text=${encodeURIComponent(message)}`;
+  };
+
+  const generateFooterLink = () => {
+    const message = 'Olá! Vim pelo site da Nexa Soluções e gostaria de mais informações sobre os serviços.';
     return `https://wa.me/5571996171605?text=${encodeURIComponent(message)}`;
   };
 
@@ -72,6 +78,7 @@ export function QuoteCartProvider({ children }) {
         generateWhatsAppMessage,
         generateWhatsAppLink,
         generateSingleServiceLink,
+        generateFooterLink,
         count: items.length
       }}
     >

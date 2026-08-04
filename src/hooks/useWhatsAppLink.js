@@ -1,11 +1,13 @@
 import { useQuoteCart } from '../context/QuoteCartContext';
 
 export function useWhatsAppLink() {
-  const { generateWhatsAppLink, generateSingleServiceLink } = useQuoteCart();
+  const { generateWhatsAppLink, generateSingleServiceLink, generateFooterLink } = useQuoteCart();
 
   const getCartLink = () => generateWhatsAppLink();
 
-  const getServiceLink = (serviceName) => generateSingleServiceLink(serviceName);
+  const getServiceLink = (serviceName, category) => generateSingleServiceLink(serviceName, category);
 
-  return { getCartLink, getServiceLink };
+  const getFooterLink = () => generateFooterLink();
+
+  return { getCartLink, getServiceLink, getFooterLink };
 }
