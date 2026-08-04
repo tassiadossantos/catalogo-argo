@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { ArrowLeft, Check, ShoppingCart, MessageCircle } from 'lucide-react';
 import { categorias } from '../data/services';
 import { useQuoteCart } from '../context/QuoteCartContext';
@@ -25,6 +26,20 @@ export function ServicePage() {
       break;
     }
   }
+
+  useEffect(() => {
+    if (service) {
+      document.title = `${service.nome} | Nexa Soluções & Negócios`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        const desc = `${service.nome} - ${service.descricao.slice(0, 150)}... Nexa Soluções & Negócios em Camaçari, BA.`;
+        metaDesc.setAttribute('content', desc);
+      }
+    }
+    return () => {
+      document.title = 'Nexa Soluções & Negócios | Soluções Digitais em Camaçari, BA';
+    };
+  }, [service]);
 
   if (!service) {
     return (
