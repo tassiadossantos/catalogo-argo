@@ -153,6 +153,44 @@ EXPOSE 80
 
 ---
 
+## Google Search Console (Indexação)
+
+Após o deploy, submeta o site ao Google para indexar todas as 99 páginas.
+
+### Passo 1 — Criar propriedade
+
+1. Acesse [search.google.com/search-console](https://search.google.com/search-console)
+2. Clique em **"Adicionar propriedade"**
+3. Digite a URL completa: `https://nexasolucoes.com.br`
+
+### Passo 2 — Verificar posse do domínio
+
+1. Escolha o método **"Tag HTML"**
+2. Copie a meta tag fornecida (ex: `<meta name="google-site-verification" content="abc123..." />`)
+3. Cole no `index.html`, **antes da tag `</head>`**
+4. Faça deploy novamente
+5. Volte ao Search Console e clique em **"Verificar"**
+
+### Passo 3 — Enviar sitemap
+
+1. No menu lateral, vá em **Sitemaps**
+2. Digite: `sitemap.xml`
+3. Clique em **"Enviar"**
+
+### Passo 4 — Monitorar
+
+- **Abas úteis:** Desempenho, Cobertura, Sitemaps
+- Google indexa em 1-7 dias (podendo levar até 4 semanas)
+- Reenvie o sitemap sempre que adicionar muitas páginas novas
+
+### Notas
+
+- O `robots.txt` já aponta para o sitemap automaticamente
+- Cada página de serviço tem título e descrição dinâmicos (SEO on-page)
+- Schema.org `LocalBusiness` com horários, telefone e endereço já configurados
+
+---
+
 ## Branding
 
 - **Logo:** `public/logo.png` (header, footer, favicon)
