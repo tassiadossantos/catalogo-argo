@@ -2,6 +2,8 @@
 
 Catálogo de serviços interativo com navegação por categoria, busca textual, carrinho de orçamento consolidado e envio via WhatsApp.
 
+**Link:** [nexasolucoes.com.br](https://nexasolucoes.com.br)
+
 ---
 
 ## Stack Tecnológica
@@ -29,8 +31,8 @@ Catálogo de serviços interativo com navegação por categoria, busca textual, 
 ## Instalação
 
 ```bash
-git clone <repositorio>
-cd catalogo-digital
+git clone https://github.com/tassiadossantos/catalogo-nexa.git
+cd catalogo-nexa
 npm install
 npm run dev
 ```
@@ -63,10 +65,10 @@ src/
 │   ├── cart/            QuoteCartPanel, QuoteCartButton
 │   └── ui/              Button, Badge, SectionTitle, EmptyState
 ├── pages/               CategoryPage, ServicePage
-├── data/                services.js (11 categorias, 87+ serviços, 4 pacotes)
+├── data/                services.js (13 categorias, 152 serviços, 4 pacotes)
 ├── context/             QuoteCartContext (estado global do carrinho)
 ├── hooks/               useWhatsAppLink
-├── test/                9 arquivos de teste (92 assertions)
+├── test/                10 arquivos de teste (128 assertions)
 └── App.jsx              Roteamento e composição principal
 ```
 
@@ -86,7 +88,7 @@ App (Router)
 
 ## Funcionalidades
 
-- **Filtro por categoria** — 11 categorias com chips clicáveis, prioridade visual para top 3
+- **Filtro por categoria** — 13 categorias com chips clicáveis, prioridade visual para top 3
 - **Busca textual** — filtro em tempo real por nome e descrição
 - **Carrinho de orçamento** — seleção múltipla, persistência em localStorage, envio consolidado via WhatsApp
 - **CTA individual** — botão de contato direto por serviço
@@ -99,7 +101,7 @@ App (Router)
 
 ## Testes
 
-92 assertions distribuídas em 9 arquivos:
+128 assertions distribuídas em 10 arquivos:
 
 | Arquivo | Escopo |
 |---|---|
@@ -155,7 +157,7 @@ EXPOSE 80
 
 ## Google Search Console (Indexação)
 
-Após o deploy, submeta o site ao Google para indexar todas as 99 páginas.
+Após o deploy, submeta o site ao Google para indexar todas as páginas.
 
 ### Passo 1 — Criar propriedade
 
@@ -194,7 +196,7 @@ Após o deploy, submeta o site ao Google para indexar todas as 99 páginas.
 ## Branding
 
 - **Logo:** `public/logo.png` (header, footer, favicon)
-- **Paleta:** verde esmeralda (`#10b981`) + prata/cinza (`#94a3b8`)
+- **Paleta:** verde primário (`#00e5a0`) + fundo escuro (`#060610`)
 - **Favicon:** `public/logo.png`
 
 ---
