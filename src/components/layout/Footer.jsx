@@ -72,11 +72,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/[0.03] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-muted text-center sm:text-left">
-            {new Date().getFullYear()} NEXA SOLUÇÕES & NEGÓCIOS. TODOS OS DIREITOS RESERVADOS.
-          </p>
           <p className="text-xs text-text-muted">
-            CNPJ: XX.XXX.XXX/0001-XX
+            {new Date().getFullYear()} NEXA SOLUÇÕES & NEGÓCIOS. TODOS OS DIREITOS RESERVADOS.
           </p>
         </div>
       </div>
