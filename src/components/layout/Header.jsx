@@ -21,7 +21,7 @@ export function Header({ onCartClick }) {
         <div className="flex h-16 sm:h-20 items-center justify-between">
           <a href="/" className="flex items-center gap-3 shrink-0 group">
             <img src="/logo.png" alt="Nexa" className="h-8 sm:h-10 w-auto transition-all duration-300 group-hover:drop-shadow-[0_0_6px_rgba(0,229,160,0.2)]" />
-            <span className="text-sm sm:text-lg font-bold tracking-tight text-white hidden sm:block">
+            <span className="text-sm sm:text-lg font-bold tracking-tight text-white">
               Nexa Soluções & Negócios
             </span>
           </a>
