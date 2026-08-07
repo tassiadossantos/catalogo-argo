@@ -3,13 +3,13 @@ import { categorias, pacotes } from '../data/services';
 
 describe('services.js', () => {
   describe('categorias', () => {
-    it('possui exatamente 11 categorias', () => {
-      expect(categorias).toHaveLength(11);
+    it('possui exatamente 13 categorias', () => {
+      expect(categorias).toHaveLength(13);
     });
 
     it('todas têm id único', () => {
       const ids = categorias.map((c) => c.id);
-      expect(new Set(ids).size).toBe(11);
+      expect(new Set(ids).size).toBe(13);
     });
 
     it('todas têm titulo', () => {
@@ -19,9 +19,9 @@ describe('services.js', () => {
       });
     });
 
-    it('todas têm prioridade de 1 a 11', () => {
+    it('todas têm prioridade de 1 a 13', () => {
       const prioridades = categorias.map((c) => c.prioridade).sort((a, b) => a - b);
-      expect(prioridades).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+      expect(prioridades).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
     });
 
     it('todas têm pelo menos 1 item', () => {
@@ -38,59 +38,69 @@ describe('services.js', () => {
       });
     });
 
-    it('comerciantes-autonomos tem 12 itens', () => {
-      const cat = categorias.find((c) => c.id === 'comerciantes-autonomos');
-      expect(cat.itens).toHaveLength(12);
+    it('trabalhos-academicos tem 13 itens', () => {
+      const cat = categorias.find((c) => c.id === 'trabalhos-academicos');
+      expect(cat.itens).toHaveLength(13);
     });
 
-    it('personalizacao-impressa tem 11 itens', () => {
-      const cat = categorias.find((c) => c.id === 'personalizacao-impressa');
+    it('curriculos-carreira tem 7 itens', () => {
+      const cat = categorias.find((c) => c.id === 'curriculos-carreira');
+      expect(cat.itens).toHaveLength(7);
+    });
+
+    it('servicos-online-burocraticos tem 16 itens', () => {
+      const cat = categorias.find((c) => c.id === 'servicos-online-burocraticos');
+      expect(cat.itens).toHaveLength(16);
+    });
+
+    it('redacao-digitação-contratos tem 4 itens', () => {
+      const cat = categorias.find((c) => c.id === 'redacao-digitação-contratos');
+      expect(cat.itens).toHaveLength(4);
+    });
+
+    it('impressao-digitalizacao tem 11 itens', () => {
+      const cat = categorias.find((c) => c.id === 'impressao-digitalizacao');
       expect(cat.itens).toHaveLength(11);
     });
 
-    it('presenca-digital tem 7 itens', () => {
+    it('presenca-digital tem 10 itens', () => {
       const cat = categorias.find((c) => c.id === 'presenca-digital');
-      expect(cat.itens).toHaveLength(7);
-    });
-
-    it('festas-personalizados tem 10 itens', () => {
-      const cat = categorias.find((c) => c.id === 'festas-personalizados');
       expect(cat.itens).toHaveLength(10);
     });
 
-    it('automacao-solucoes-digitais tem 9 itens', () => {
-      const cat = categorias.find((c) => c.id === 'automacao-solucoes-digitais');
-      expect(cat.itens).toHaveLength(9);
+    it('comerciantes-autonomos tem 22 itens', () => {
+      const cat = categorias.find((c) => c.id === 'comerciantes-autonomos');
+      expect(cat.itens).toHaveLength(22);
     });
 
-    it('desenvolvimento-web tem 4 itens', () => {
+    it('desenvolvimento-web tem 10 itens', () => {
       const cat = categorias.find((c) => c.id === 'desenvolvimento-web');
-      expect(cat.itens).toHaveLength(4);
+      expect(cat.itens).toHaveLength(10);
     });
 
-    it('trabalhos-academicos tem 9 itens', () => {
-      const cat = categorias.find((c) => c.id === 'trabalhos-academicos');
-      expect(cat.itens).toHaveLength(9);
-    });
-
-    it('impressao-digitalizacao tem 8 itens', () => {
-      const cat = categorias.find((c) => c.id === 'impressao-digitalizacao');
-      expect(cat.itens).toHaveLength(8);
-    });
-
-    it('curriculos-carreira tem 4 itens', () => {
-      const cat = categorias.find((c) => c.id === 'curriculos-carreira');
-      expect(cat.itens).toHaveLength(4);
-    });
-
-    it('servicos-online-burocraticos tem 6 itens', () => {
-      const cat = categorias.find((c) => c.id === 'servicos-online-burocraticos');
-      expect(cat.itens).toHaveLength(6);
-    });
-
-    it('informatica-suporte tem 7 itens', () => {
+    it('informatica-suporte tem 15 itens', () => {
       const cat = categorias.find((c) => c.id === 'informatica-suporte');
+      expect(cat.itens).toHaveLength(15);
+    });
+
+    it('personalizacao-impressa tem 22 itens', () => {
+      const cat = categorias.find((c) => c.id === 'personalizacao-impressa');
+      expect(cat.itens).toHaveLength(22);
+    });
+
+    it('festas-personalizados tem 7 itens', () => {
+      const cat = categorias.find((c) => c.id === 'festas-personalizados');
       expect(cat.itens).toHaveLength(7);
+    });
+
+    it('automacao-solucoes-digitais tem 7 itens', () => {
+      const cat = categorias.find((c) => c.id === 'automacao-solucoes-digitais');
+      expect(cat.itens).toHaveLength(7);
+    });
+
+    it('bottons-personalizados tem 8 itens', () => {
+      const cat = categorias.find((c) => c.id === 'bottons-personalizados');
+      expect(cat.itens).toHaveLength(8);
     });
   });
 

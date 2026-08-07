@@ -8,10 +8,10 @@ describe('CategoryFilter', () => {
     expect(screen.getByRole('button', { name: /todos/i })).toBeInTheDocument();
   });
 
-  it('renderiza 12 botões no total (1 todos + 11 categorias)', () => {
+  it('renderiza 14 botões no total (1 todos + 13 categorias)', () => {
     render(<CategoryFilter activeCategory="todos" onCategoryChange={() => {}} />);
     const buttons = screen.getAllByRole('button');
-    expect(buttons).toHaveLength(12);
+    expect(buttons).toHaveLength(14);
   });
 
   it('chama onCategoryChange ao clicar na primeira categoria', () => {
@@ -19,18 +19,18 @@ describe('CategoryFilter', () => {
     render(<CategoryFilter activeCategory="todos" onCategoryChange={onChange} />);
     const buttons = screen.getAllByRole('button');
     fireEvent.click(buttons[1]);
-    expect(onChange).toHaveBeenCalledWith('comerciantes-autonomos');
+    expect(onChange).toHaveBeenCalledWith('trabalhos-academicos');
   });
 
   it('chama onCategoryChange com "todos" ao clicar em Todos', () => {
     const onChange = vi.fn();
-    render(<CategoryFilter activeCategory="comerciantes-autonomos" onCategoryChange={onChange} />);
+    render(<CategoryFilter activeCategory="trabalhos-academicos" onCategoryChange={onChange} />);
     fireEvent.click(screen.getByRole('button', { name: /todos/i }));
     expect(onChange).toHaveBeenCalledWith('todos');
   });
 
   it('destaca categoria ativa com bg-primary', () => {
-    render(<CategoryFilter activeCategory="comerciantes-autonomos" onCategoryChange={() => {}} />);
+    render(<CategoryFilter activeCategory="trabalhos-academicos" onCategoryChange={() => {}} />);
     const buttons = screen.getAllByRole('button');
     const activeBtn = buttons[1];
     expect(activeBtn.className).toContain('bg-primary');
