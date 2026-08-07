@@ -203,7 +203,7 @@ function CatalogPage() {
 
       <Footer />
 
-      <WhatsAppFloatingButton />
+      <WhatsAppFloatingButton hidden={cartOpen} />
       <QuoteCartPanel isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </>
   );

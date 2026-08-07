@@ -2,11 +2,11 @@ import { MessageCircle } from 'lucide-react';
 import { useQuoteCart } from '../../context/QuoteCartContext';
 import { useWhatsAppLink } from '../../hooks/useWhatsAppLink';
 
-export function WhatsAppFloatingButton() {
+export function WhatsAppFloatingButton({ hidden = false }) {
   const { count } = useQuoteCart();
   const { getCartLink } = useWhatsAppLink();
 
-  if (count === 0) return null;
+  if (count === 0 || hidden) return null;
 
   return (
     <a
