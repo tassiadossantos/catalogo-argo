@@ -2,8 +2,6 @@
 
 Catálogo de serviços interativo com navegação por categoria, busca textual, carrinho de orçamento consolidado e envio via WhatsApp.
 
-**Link:** [nexasolucoes.com.br](https://nexasolucoes.com.br)
-
 ---
 
 ## Stack Tecnológica
@@ -163,7 +161,7 @@ Após o deploy, submeta o site ao Google para indexar todas as páginas.
 
 1. Acesse [search.google.com/search-console](https://search.google.com/search-console)
 2. Clique em **"Adicionar propriedade"**
-3. Digite a URL completa: `https://nexasolucoes.com.br`
+3. Digite a URL completa do seu domínio
 
 ### Passo 2 — Verificar posse do domínio
 
