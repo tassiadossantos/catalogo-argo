@@ -61,8 +61,8 @@ export function Hero() {
           {/* Stats */}
           <div className="flex items-center justify-center gap-10 sm:gap-16 mt-10 animate-fade-in" style={{ animationDelay: '400ms' }}>
             {[
-              { value: '87+', label: 'Serviços' },
-              { value: '11', label: 'Categorias' },
+              { value: '152+', label: 'Serviços' },
+              { value: '13', label: 'Categorias' },
               { value: '24h', label: 'Resposta' }
             ].map((stat) => (
               <div key={stat.label} className="text-center">

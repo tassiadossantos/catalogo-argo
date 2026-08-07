@@ -115,11 +115,11 @@ function CatalogPage() {
               {/* Números */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-16">
                 <div className="text-center p-5 rounded-2xl glass border border-white/[0.04]">
-                  <p className="text-3xl sm:text-4xl font-bold text-primary mb-1">87+</p>
+                  <p className="text-3xl sm:text-4xl font-bold text-primary mb-1">152+</p>
                   <p className="text-text-muted text-xs sm:text-sm">Serviços disponíveis</p>
                 </div>
                 <div className="text-center p-5 rounded-2xl glass border border-white/[0.04]">
-                  <p className="text-3xl sm:text-4xl font-bold text-primary mb-1">11</p>
+                  <p className="text-3xl sm:text-4xl font-bold text-primary mb-1">13</p>
                   <p className="text-text-muted text-xs sm:text-sm">Áreas de atuação</p>
                 </div>
                 <div className="text-center p-5 rounded-2xl glass border border-white/[0.04]">
