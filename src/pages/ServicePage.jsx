@@ -29,15 +29,15 @@ export function ServicePage() {
 
   useEffect(() => {
     if (service) {
-      document.title = `${service.nome} | Nexa Soluções & Negócios`;
+      document.title = `${service.nome} | ARGO Soluções & Negócios`;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
-        const desc = `${service.nome} - ${service.descricao.slice(0, 150)}... Nexa Soluções & Negócios em Camaçari, BA.`;
+        const desc = `${service.nome} - ${service.descricao.slice(0, 150)}... ARGO Soluções & Negócios em Camaçari, BA.`;
         metaDesc.setAttribute('content', desc);
       }
     }
     return () => {
-      document.title = 'Nexa Soluções & Negócios | Soluções Digitais em Camaçari, BA';
+      document.title = 'ARGO Soluções & Negócios | Soluções Digitais em Camaçari, BA';
     };
   }, [service]);
 

@@ -12,14 +12,14 @@ function TestWrapper({ children }) {
 describe('Header', () => {
   it('renderiza logo', () => {
     render(<Header onCartClick={() => {}} />, { wrapper: TestWrapper });
-    const logo = screen.getByAltText(/nexa/i);
+    const logo = screen.getByAltText(/argo/i);
     expect(logo).toBeInTheDocument();
     expect(logo.src).toContain('logo.png');
   });
 
   it('renderiza nome da empresa', () => {
     render(<Header onCartClick={() => {}} />, { wrapper: TestWrapper });
-    expect(screen.getByText(/nexa soluções/i)).toBeInTheDocument();
+    expect(screen.getByText(/argo soluções/i)).toBeInTheDocument();
   });
 
   it('renderiza links de navegação', () => {
@@ -51,7 +51,7 @@ describe('Header', () => {
 describe('Footer', () => {
   it('renderiza logo', () => {
     render(<Footer />, { wrapper: TestWrapper });
-    const logo = screen.getByAltText(/nexa/i);
+    const logo = screen.getByAltText(/argo/i);
     expect(logo).toBeInTheDocument();
   });
 

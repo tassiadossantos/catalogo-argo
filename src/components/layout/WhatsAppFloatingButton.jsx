@@ -21,7 +21,7 @@ export function WhatsAppFloatingButton({ hidden = false }) {
       <span className="hidden sm:inline data-badge">ENVIAR ORÇAMENTO</span>
       <span
         className="absolute -top-2 -right-2 min-w-[24px] h-6 flex items-center justify-center px-1 bg-primary text-[#030308] text-[10px] font-bold rounded-full"
-        style={{ boxShadow: '0 0 12px rgba(0, 229, 160, 0.25)' }}
+        style={{ boxShadow: '0 0 12px rgba(92, 171, 235, 0.25)' }}
       >
         {count > 99 ? '99+' : count}
       </span>

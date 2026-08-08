@@ -12,9 +12,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 mb-12 sm:mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <img src="/logo.png" alt="Nexa" className="h-8 w-auto" />
-              <span className="font-bold text-sm text-white">Nexa Soluções & Negócios</span>
+            <div className="mb-5">
+              <span className="font-bold text-sm text-white">ARGO Soluções & Negócios</span>
             </div>
             <p className="text-text-secondary text-sm leading-relaxed">
               Impressão, presença digital, desenvolvimento web, automação e personalização.
@@ -41,7 +40,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-text-muted">
                 <Mail className="w-4 h-4 text-text-muted shrink-0" />
-                <span className="min-w-0 break-all">contato@nexasolucoes.com.br</span>
+                <span className="min-w-0 break-all">contato@argosolucoes.com.br</span>
               </li>
               <li className="flex items-center gap-3 text-text-muted">
                 <MapPin className="w-4 h-4 text-text-muted shrink-0" />
@@ -73,7 +72,7 @@ export function Footer() {
 
         <div className="border-t border-white/[0.03] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-muted">
-            {new Date().getFullYear()} NEXA SOLUÇÕES & NEGÓCIOS. TODOS OS DIREITOS RESERVADOS.
+            {new Date().getFullYear()} ARGO SOLUÇÕES & NEGÓCIOS. TODOS OS DIREITOS RESERVADOS.
           </p>
         </div>
       </div>

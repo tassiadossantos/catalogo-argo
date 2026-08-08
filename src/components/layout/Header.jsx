@@ -19,10 +19,9 @@ export function Header({ onCartClick }) {
 
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="flex h-16 sm:h-20 items-center justify-between">
-          <a href="/" className="flex items-center gap-3 shrink-0 group">
-            <img src="/logo.png" alt="Nexa" className="h-8 sm:h-10 w-auto transition-all duration-300 group-hover:drop-shadow-[0_0_6px_rgba(0,229,160,0.2)]" />
+          <a href="/" className="flex items-center shrink-0 group">
             <span className="text-sm sm:text-lg font-bold tracking-tight text-white">
-              Nexa Soluções & Negócios
+              ARGO Soluções & Negócios
             </span>
           </a>
 
@@ -46,7 +45,7 @@ export function Header({ onCartClick }) {
               <ShoppingCart className="w-5 h-5" />
               <span className="hidden sm:inline">Orçamento</span>
               {count > 0 && (
-                <span className="absolute -top-2 -right-2 min-w-[20px] h-5 flex items-center justify-center px-1 bg-primary text-[#030308] text-[10px] font-bold rounded-full" style={{ boxShadow: '0 0 12px rgba(0, 229, 160, 0.3)' }}>
+                <span className="absolute -top-2 -right-2 min-w-[20px] h-5 flex items-center justify-center px-1 bg-primary text-[#030308] text-[10px] font-bold rounded-full" style={{ boxShadow: '0 0 12px rgba(92, 171, 235, 0.3)' }}>
                   {count > 99 ? '99+' : count}
                 </span>
               )}

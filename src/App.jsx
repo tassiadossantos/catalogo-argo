@@ -102,7 +102,7 @@ function CatalogPage() {
                   subtitle=""
                 />
                 <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mt-6">
-                  A <strong className="text-white">Nexa Soluções & Negócios</strong> nasceu para eliminar a fragmentação que sufoca empreendedores. Hoje, um comerciante precisa de 5 a 8 fornecedores diferentes para resolver impressão, presença digital, automação e desenvolvimento — cada um com contrato, prazo e linguagem própria.
+                  A <strong className="text-white">ARGO Soluções & Negócios</strong> nasceu para eliminar a fragmentação que sufoca empreendedores. Hoje, um comerciante precisa de 5 a 8 fornecedores diferentes para resolver impressão, presença digital, automação e desenvolvimento — cada um com contrato, prazo e linguagem própria.
                 </p>
                 <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mt-4">
                   Unimos essas frentes em uma única operação integrada. <strong className="text-white">Um único contato. Uma única visão. Um único resultado:</strong> seu negócio funcionando com a eficiência que merece, sem a complexidade que não precisa.
@@ -167,7 +167,7 @@ function CatalogPage() {
 
               {/* Diferenciais */}
               <div className="mb-16">
-                <h3 className="text-center text-xs font-semibold tracking-widest uppercase text-text-secondary mb-8">Por que a Nexa é diferente</h3>
+                <h3 className="text-center text-xs font-semibold tracking-widest uppercase text-text-secondary mb-8">Por que a ARGO é diferente</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="flex items-start gap-3 p-4 rounded-xl glass border border-white/[0.04]">
                     <div className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
@@ -187,13 +187,13 @@ function CatalogPage() {
               {/* CTA */}
               <div className="text-center">
                 <a
-                  href="https://wa.me/5571996171605?text=Olá! Gostaria de saber mais sobre a Nexa Soluções."
+                  href="https://wa.me/5571996171605?text=Olá! Gostaria de saber mais sobre a ARGO Soluções."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-[#030308] font-semibold text-sm hover:brightness-110 active:scale-[0.97] transition-all duration-300"
-                  style={{ boxShadow: '0 4px 24px rgba(0, 229, 160, 0.2)' }}
+                  style={{ boxShadow: '0 4px 24px rgba(92, 171, 235, 0.2)' }}
                 >
-                  Fale com a Nexa agora
+                  Fale com a ARGO agora
                 </a>
               </div>
             </div>

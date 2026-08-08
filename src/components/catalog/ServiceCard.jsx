@@ -34,7 +34,7 @@ export function ServiceCard({ service, categoryId }) {
               aria-label={`Ver detalhes de ${service.nome}`}
             >
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(0,229,160,0.08)]"
+                className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(92,171,235,0.08)]"
                 style={{
                   backgroundColor: 'rgba(255,255,255,0.02)',
                   border: `1px solid ${accent}12`
