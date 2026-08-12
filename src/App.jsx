@@ -11,25 +11,11 @@ import { QuoteCartPanel } from './components/cart/QuoteCartPanel';
 import { SectionTitle } from './components/ui/SectionTitle';
 import { ServicePage } from './pages/ServicePage';
 import { CategoryPage } from './pages/CategoryPage';
+import { BrandPage } from './pages/BrandPage';
 import { categorias, pacotes } from './data/services';
+import { brands } from './data/brands';
 import { getCategoryIcon } from './components/catalog/categoryIcons';
 import { getAccent } from './components/catalog/categoryAccents';
-
-const brandCategoryNames = {
-  'trabalhos-academicos': 'ARGO Acadêmico',
-  'curriculos-carreira': 'ARGO Carreira',
-  'servicos-online-burocraticos': 'ARGO Documentos',
-  'redacao-digitação-contratos': 'ARGO Documentos',
-  'impressao-digitalizacao': 'ARGO Impressão',
-  'presenca-digital': 'ARGO Digital',
-  'comerciantes-autonomos': 'ARGO Digital',
-  'desenvolvimento-web': 'ARGO Web & Tech',
-  'informatica-suporte': 'ARGO Web & Tech',
-  'personalizacao-impressa': 'ARGO Impressão',
-  'festas-personalizados': 'ARGO Festas',
-  'automacao-solucoes-digitais': 'ARGO Web & Tech',
-  'bottons-personalizados': 'ARGO Bottons'
-};
 
 const howItWorks = [
   {
@@ -187,7 +173,6 @@ const testimonials = [
 function CatalogPage() {
   const [cartOpen, setCartOpen] = useState(false);
 
-  const sortedCategories = [...categorias].sort((a, b) => a.prioridade - b.prioridade);
   const testimonialMarqueeItems = [...testimonials, ...testimonials];
 
   return (
@@ -205,14 +190,23 @@ function CatalogPage() {
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-10 stagger" style={{ gridAutoRows: '1fr' }}>
-              {sortedCategories.map((cat) => {
-                const Icon = getCategoryIcon(cat.id);
-                const accent = getAccent(cat.id);
+              {brands.map((brand) => {
+                const primaryCatId = brand.categoriaIds[0];
+                const primaryCat = categorias.find((c) => c.id === primaryCatId);
+                const Icon = getCategoryIcon(primaryCatId);
+                const accent = getAccent(primaryCatId);
+                const totalItems = brand.categoriaIds.reduce((sum, catId) => {
+                  const cat = categorias.find((c) => c.id === catId);
+                  return sum + (cat ? cat.itens.length : 0);
+                }, 0);
+                const otherCats = brand.categoriaIds.slice(1)
+                  .map((catId) => categorias.find((c) => c.id === catId))
+                  .filter(Boolean);
 
                 return (
                   <Link
-                    key={cat.id}
-                    to={`/categoria/${cat.id}`}
+                    key={brand.slug}
+                    to={`/marca/${brand.slug}`}
                     className="group relative rounded-2xl overflow-hidden holo-border hover-lift card-glow"
                     style={{ '--glow-color': accent }}
                   >
@@ -229,19 +223,33 @@ function CatalogPage() {
                         </div>
                         <div>
                           <h3 className="font-bold text-white text-lg leading-snug group-hover:text-primary-light transition-colors duration-300">
-                            {brandCategoryNames[cat.id] || cat.titulo}
+                            {brand.nome}
                           </h3>
-                          <p className="text-sm text-text-muted mt-1">{cat.titulo} · {cat.itens.length} serviços</p>
+                          <p className="text-sm text-text-muted mt-1">{totalItems} serviços</p>
                         </div>
                       </div>
 
                       <p className="text-sm font-semibold mb-3" style={{ color: accent }}>
-                        {cat.gancho}
+                        {primaryCat.gancho}
                       </p>
 
                       <p className="text-text-secondary text-sm leading-relaxed mb-5 flex-1">
-                        {cat.subtexto}
+                        {primaryCat.subtexto}
                       </p>
+
+                      {otherCats.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-5">
+                          {otherCats.map((oc) => (
+                            <span
+                              key={oc.id}
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium"
+                              style={{ backgroundColor: `${getAccent(oc.id)}0a`, color: getAccent(oc.id), border: `1px solid ${getAccent(oc.id)}12` }}
+                            >
+                              {oc.titulo}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </Link>
                 );
@@ -407,7 +415,7 @@ function CatalogPage() {
                   <p className="text-text-muted text-xs sm:text-sm">Serviços disponíveis</p>
                 </div>
                 <div className="text-center p-5 rounded-2xl glass border border-white/[0.04]">
-                  <p className="text-3xl sm:text-4xl font-bold text-primary mb-1">13</p>
+                  <p className="text-3xl sm:text-4xl font-bold text-primary mb-1">9</p>
                   <p className="text-text-muted text-xs sm:text-sm">Áreas de atuação</p>
                 </div>
                 <div className="text-center p-5 rounded-2xl glass border border-white/[0.04]">
@@ -505,6 +513,7 @@ function App() {
           <Routes>
             <Route path="/" element={<CatalogPage />} />
             <Route path="/categoria/:id" element={<CategoryPage />} />
+            <Route path="/marca/:brandSlug" element={<BrandPage />} />
             <Route path="/servico/:id" element={<ServicePage />} />
           </Routes>
         </div>
