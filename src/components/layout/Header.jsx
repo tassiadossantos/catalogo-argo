@@ -4,7 +4,9 @@ import { useQuoteCart } from '../../context/QuoteCartContext';
 
 const navLinks = [
   { label: 'Serviços', href: '#catalogo' },
+  { label: 'Como funciona', href: '#como-funciona' },
   { label: 'Pacotes', href: '#pacotes' },
+  { label: 'Resultados', href: '#prova-social' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Contato', href: '#contato' }
 ];

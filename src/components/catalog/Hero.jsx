@@ -28,14 +28,13 @@ export function Hero() {
         <div className="mx-auto max-w-4xl text-center">
           {/* Title */}
           <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.15] animate-slide-up">
-            <span className="text-metallic font-light text-[0.55em] block">Soluções</span>
-            <span className="text-metallic block">Digitais</span>
-            <span className="text-metallic font-light text-[0.55em] block">& Tecnologia</span>
+            <span className="text-metallic font-light text-[0.55em] block">Tudo o que você precisa.</span>
+            <span className="text-metallic block">Em um só lugar.</span>
           </h1>
 
           {/* Description */}
           <p className="text-base sm:text-lg text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '100ms' }}>
-            De cartões de visita a sites profissionais. Explore por categoria, selecione múltiplos serviços e envie um orçamento consolidado.
+            Documentos, impressão, presença digital, tecnologia e automação em um único atendimento. Você pede, a ARGO organiza, executa e entrega.
           </p>
 
           {/* CTAs */}
@@ -44,7 +43,7 @@ export function Hero() {
               href="#catalogo"
               className="group inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 glass border border-white/[0.06] text-white font-semibold rounded-xl hover:bg-white/[0.04] hover:border-white/[0.1] active:scale-[0.97] transition-all duration-300 text-sm tracking-wide"
             >
-              Explorar catálogo
+              Resolver com a ARGO
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
             <a
@@ -54,7 +53,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 glass border border-white/[0.04] font-semibold rounded-xl hover:bg-white/[0.03] hover:border-white/[0.08] active:scale-[0.97] transition-all duration-300 text-sm"
             >
               <MessageCircle className="w-4 h-4 text-text-muted" />
-              <span className="text-text-secondary">Falar no WhatsApp</span>
+              <span className="text-text-secondary">Pedir orçamento</span>
             </a>
           </div>
 

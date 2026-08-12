@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #5cabeb;
-  --color-primary-dark: #4a96d6;
-  --color-primary-light: #7cbbf1;
-  --color-primary-50: rgba(92, 171, 235, 0.06);
-  --color-accent: #c0c8d4;
-  --color-accent-light: #dfe4ec;
-  --color-surface: #030308;
-  --color-surface-alt: #060610;
+  --color-primary: #49d7ff;
+  --color-primary-dark: #1a8fb8;
+  --color-primary-light: #8ee9ff;
+  --color-primary-50: rgba(73, 215, 255, 0.08);
+  --color-accent: #c4ccd8;
+  --color-accent-light: #eef3f8;
+  --color-surface: #030812;
+  --color-surface-alt: #06111f;
   --color-surface-card: rgba(255, 255, 255, 0.012);
   --color-surface-elevated: rgba(255, 255, 255, 0.02);
   --color-text: #e8eaf0;
@@ -28,7 +28,9 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--color-text);
-  background: var(--color-surface);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(73, 215, 255, 0.055), transparent 34rem),
+    linear-gradient(180deg, #030812 0%, #02050c 48%, #030812 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,17 +56,30 @@ body::before {
 
 /* ─── GLASS ─── */
 .glass {
-  background: rgba(255, 255, 255, 0.015);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.008)),
+    rgba(3, 8, 18, 0.72);
   backdrop-filter: blur(24px) saturate(1.2);
   -webkit-backdrop-filter: blur(24px) saturate(1.2);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(196, 204, 216, 0.07);
 }
 
 .glass-strong {
-  background: rgba(255, 255, 255, 0.025);
+  background:
+    linear-gradient(145deg, rgba(196, 204, 216, 0.08), rgba(73, 215, 255, 0.018)),
+    rgba(6, 17, 31, 0.82);
   backdrop-filter: blur(48px) saturate(1.4);
   -webkit-backdrop-filter: blur(48px) saturate(1.4);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(196, 204, 216, 0.1);
+}
+
+.metal-panel {
+  background:
+    linear-gradient(135deg, rgba(196, 204, 216, 0.09), rgba(73, 215, 255, 0.018) 42%, rgba(255, 255, 255, 0.035)),
+    rgba(6, 17, 31, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 24px 80px rgba(0, 0, 0, 0.32);
 }
 
 /* ─── HOLOGRAPHIC BORDER ─── */
@@ -142,8 +157,8 @@ body::before {
 /* ─── GRID BACKGROUND ─── */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+    linear-gradient(rgba(196, 204, 216, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196, 204, 216, 0.018) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -222,6 +237,11 @@ body::before {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes testimonialMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 10px)); }
+}
+
 @keyframes accentPulse {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
@@ -238,6 +258,21 @@ body::before {
   background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.01) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 6s ease-in-out infinite;
+}
+
+.testimonial-marquee {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+
+.testimonial-track {
+  animation: testimonialMarquee 90s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-marquee:hover .testimonial-track,
+.testimonial-marquee:focus-within .testimonial-track {
+  animation-play-state: paused;
 }
 
 /* ─── STAGGER ─── */
@@ -286,7 +321,7 @@ body::before {
 
 /* ─── METALLIC TEXT ─── */
 .text-metallic {
-  background: linear-gradient(135deg, #c0c8d4 0%, #ffffff 40%, #c0c8d4 60%, #8892a8 100%);
+  background: linear-gradient(135deg, #8d98aa 0%, #ffffff 34%, #c4ccd8 56%, #49d7ff 82%, #7b8798 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

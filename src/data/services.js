@@ -312,8 +312,8 @@ export const categorias = [
 export const pacotes = [
   {
     id: "kit-presenca-digital",
-    titulo: "Kit Presença Digital",
-    descricao: "Tudo que seu negócio precisa para estar presente online. Google, WhatsApp e Instagram configurados profissionalmente.",
+    titulo: "Plano ARGO Presença Digital",
+    descricao: "Google, WhatsApp e Instagram organizados em uma presença digital simples, profissional e pronta para receber clientes.",
     itens: [
       "Cadastro Google Meu Negócio",
       "WhatsApp Business Configuração Básica",
@@ -323,8 +323,8 @@ export const pacotes = [
   },
   {
     id: "kit-comercio-local",
-    titulo: "Kit Comércio Local",
-    descricao: "Soluções essenciais para comércios e estabelecimentos locais. Cardápio, QR Code e presença no Google.",
+    titulo: "Plano ARGO Comércio Local",
+    descricao: "Soluções essenciais para estabelecimentos locais: cardápio, QR Code e presença no Google em uma entrega coordenada.",
     itens: [
       "Cardápio Digital Básico",
       "QR Code Simples",
@@ -334,8 +334,8 @@ export const pacotes = [
   },
   {
     id: "kit-site-express",
-    titulo: "Kit Site Express",
-    descricao: "Presença online profissional com agilidade. Site, WhatsApp e QR Code prontos para converter visitantes.",
+    titulo: "Plano ARGO Site Express",
+    descricao: "Presença online profissional com agilidade: site, WhatsApp e QR Code prontos para transformar visitas em conversas.",
     itens: [
       "Site One Page",
       "WhatsApp Business Configuração Completa com Catálogo",
@@ -345,8 +345,8 @@ export const pacotes = [
   },
   {
     id: "kit-negocio-completo",
-    titulo: "Kit Negócio Completo",
-    descricao: "Pacote completo para quem quer uma presença digital fortalecida. Logo, presença online e profissionalismo do começo ao fim.",
+    titulo: "Plano ARGO Negócio Completo",
+    descricao: "Marca, presença online e canais de atendimento organizados para quem quer começar ou reposicionar o negócio com segurança.",
     itens: [
       "Logo Profissional",
       "Cadastro Google Meu Negócio",
