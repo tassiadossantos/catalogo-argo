@@ -52,121 +52,121 @@ const testimonials = [
     quote: 'Chamei para resolver uma coisa e saí com tudo encaminhado. Foi rápido, claro e sem complicação.',
     author: 'Mariana Costa',
     role: 'Serviços documentais',
-    photo: 'https://randomuser.me/api/portraits/women/44.jpg?v=argo-pro'
+    photo: '/Mariana Costa.jpg'
   },
   {
     quote: 'A ARGO organizou minha presença digital e meus materiais no mesmo atendimento. Economizou tempo e evitou retrabalho.',
     author: 'Fernanda Lima',
     role: 'Empreendedora local',
-    photo: 'https://randomuser.me/api/portraits/women/68.jpg?v=argo-pro'
+    photo: '/Fernanda Lima.jpg'
   },
   {
     quote: 'Gostei porque explicaram o que eu precisava levar, deram prazo e entregaram pronto para usar.',
     author: 'Roberto Almeida',
     role: 'Impressão e digitalização',
-    photo: 'https://randomuser.me/api/portraits/men/32.jpg?v=argo-pro'
+    photo: '/Roberto Almeida.jpg'
   },
   {
     quote: 'Eu precisava de currículo, LinkedIn e carta de apresentação. A ARGO organizou tudo com uma linguagem profissional.',
     author: 'Camila Torres',
     role: 'Currículos e carreira',
-    photo: 'https://randomuser.me/api/portraits/women/65.jpg?v=argo-pro'
+    photo: '/Camila Torres.jpg'
   },
   {
     quote: 'Meu cardápio digital saiu junto com QR Code e ajustes no WhatsApp Business. Foi tudo no mesmo fluxo.',
     author: 'Rafael Santos',
     role: 'Comércio local',
-    photo: 'https://randomuser.me/api/portraits/men/75.jpg?v=argo-pro'
+    photo: '/Rafael Santos.jpg'
   },
   {
     quote: 'O atendimento foi paciente e direto. Eu não sabia mexer no portal, mas saí com a certidão resolvida.',
     author: 'Helena Martins',
     role: 'Serviços online',
-    photo: 'https://randomuser.me/api/portraits/women/76.jpg?v=argo-pro'
+    photo: '/Helena Martins.jpg'
   },
   {
     quote: 'Fiz etiquetas, cartões e arte para divulgação. O bom foi não precisar explicar minha marca para três fornecedores diferentes.',
     author: 'Juliana Rocha',
     role: 'Personalização impressa',
-    photo: 'https://randomuser.me/api/portraits/women/79.jpg?v=argo-pro'
+    photo: '/Juliana Rocha.jpg'
   },
   {
     quote: 'Meu TCC estava fora do padrão. A revisão deixou tudo organizado e pronto para enviar dentro do prazo.',
     author: 'Lucas Pereira',
     role: 'ARGO Acadêmico',
-    photo: 'https://randomuser.me/api/portraits/men/36.jpg?v=argo-pro'
+    photo: '/Lucas Pereira.jpg'
   },
   {
     quote: 'A página do meu negócio ficou clara, com botão para WhatsApp e informações certas. Já comecei a receber contatos melhores.',
     author: 'Bruno Carvalho',
     role: 'Desenvolvimento web',
-    photo: 'https://randomuser.me/api/portraits/men/52.jpg?v=argo-pro'
+    photo: '/Bruno Carvalho.jpg'
   },
   {
     quote: 'Resolveram backup, instalação e configuração de impressora. O escritório voltou a funcionar sem eu perder o dia inteiro.',
     author: 'Patrícia Nogueira',
     role: 'Informática e suporte',
-    photo: 'https://randomuser.me/api/portraits/women/45.jpg?v=argo-pro'
+    photo: '/Patrícia Nogueira.jpg'
   },
   {
     quote: 'Pedi convites e tags para a festa. A entrega veio combinando e já pronta para imprimir e distribuir.',
     author: 'Aline Batista',
     role: 'Festas e personalizados',
-    photo: 'https://randomuser.me/api/portraits/women/26.jpg?v=argo-pro'
+    photo: '/Aline Batista.jpg'
   },
   {
     quote: 'Eu precisava automatizar orçamento e etiquetas. A ARGO entendeu o processo e entregou uma solução simples de usar.',
     author: 'Diego Menezes',
     role: 'Automação digital',
-    photo: 'https://randomuser.me/api/portraits/men/41.jpg?v=argo-pro'
+    photo: '/Diego Menezes.jpg'
   },
   {
     quote: 'Os bottons ficaram com acabamento bonito e a arte veio ajustada no tamanho certo. Facilitou muito para o evento.',
     author: 'Nathalia Ribeiro',
     role: 'Bottons personalizados',
-    photo: 'https://randomuser.me/api/portraits/women/17.jpg?v=argo-pro'
+    photo: '/Nathalia Ribeiro.jpg'
   },
   {
     quote: 'Fiz contrato, impressão e envio digital no mesmo atendimento. Foi prático e evitou aquela correria de última hora.',
     author: 'Eduardo Ramos',
     role: 'Contratos e documentos',
-    photo: 'https://randomuser.me/api/portraits/men/46.jpg?v=argo-pro'
+    photo: '/Eduardo Ramos.jpg'
   },
   {
     quote: 'Ajustaram meu catálogo com uma aparência mais profissional. Agora consigo apresentar meus produtos com muito mais segurança.',
     author: 'Simone Andrade',
     role: 'Catálogo digital',
-    photo: 'https://randomuser.me/api/portraits/women/32.jpg?v=argo-pro'
+    photo: '/Simone Andrade.jpg'
   },
   {
     quote: 'Eu precisava regularizar arquivos e transformar tudo em PDF. A equipe deixou tudo organizado e fácil de encontrar.',
     author: 'Marcelo Vieira',
     role: 'Digitalização e arquivos',
-    photo: 'https://randomuser.me/api/portraits/men/64.jpg?v=argo-pro'
+    photo: '/Marcelo Vieira.jpg'
   },
   {
     quote: 'Meu perfil no Google estava incompleto. Depois dos ajustes, os clientes passaram a achar horário, endereço e WhatsApp sem perguntar.',
     author: 'Renata Oliveira',
     role: 'Google Meu Negócio',
-    photo: 'https://randomuser.me/api/portraits/women/50.jpg?v=argo-pro'
+    photo: '/Renata Oliveira.jpg'
   },
   {
     quote: 'Recebi orientação clara antes de aprovar o serviço. Isso fez diferença porque eu sabia exatamente o que seria entregue.',
     author: 'Gustavo Martins',
     role: 'Atendimento consultivo',
-    photo: 'https://randomuser.me/api/portraits/men/22.jpg?v=argo-pro'
+    photo: '/Gustavo Martins.jpg'
   },
   {
     quote: 'A identidade visual ficou coerente com meu negócio e já veio aplicada em materiais que eu realmente uso no dia a dia.',
     author: 'Priscila Moura',
     role: 'Identidade visual',
-    photo: 'https://randomuser.me/api/portraits/women/12.jpg?v=argo-pro'
+    photo: '/Priscila Moura.jpg'
   },
   {
     quote: 'O suporte resolveu meu problema sem enrolação e ainda deixou um passo a passo para eu não depender de ajuda toda hora.',
     author: 'Thiago Fernandes',
     role: 'Suporte técnico',
-    photo: 'https://randomuser.me/api/portraits/men/85.jpg?v=argo-pro'
+    photo: '/Thiago Fernandes.jpg'
   }
 ];
 

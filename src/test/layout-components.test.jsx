@@ -10,11 +10,9 @@ function TestWrapper({ children }) {
 }
 
 describe('Header', () => {
-  it('renderiza logo', () => {
+  it('renderiza marca', () => {
     render(<Header onCartClick={() => {}} />, { wrapper: TestWrapper });
-    const logo = screen.getByAltText(/argo/i);
-    expect(logo).toBeInTheDocument();
-    expect(logo.src).toContain('logo.png');
+    expect(screen.getByRole('link', { name: /argo soluções/i })).toBeInTheDocument();
   });
 
   it('renderiza nome da empresa', () => {
@@ -49,10 +47,9 @@ describe('Header', () => {
 });
 
 describe('Footer', () => {
-  it('renderiza logo', () => {
+  it('renderiza marca', () => {
     render(<Footer />, { wrapper: TestWrapper });
-    const logo = screen.getByAltText(/argo/i);
-    expect(logo).toBeInTheDocument();
+    expect(screen.getAllByText(/argo soluções/i).length).toBeGreaterThan(0);
   });
 
   it('renderiza links rapidos', () => {
