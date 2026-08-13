@@ -199,10 +199,6 @@ function CatalogPage() {
                   const cat = categorias.find((c) => c.id === catId);
                   return sum + (cat ? cat.itens.length : 0);
                 }, 0);
-                const otherCats = brand.categoriaIds.slice(1)
-                  .map((catId) => categorias.find((c) => c.id === catId))
-                  .filter(Boolean);
-
                 return (
                   <Link
                     key={brand.slug}
@@ -237,15 +233,15 @@ function CatalogPage() {
                         {primaryCat.subtexto}
                       </p>
 
-                      {otherCats.length > 0 && (
+                      {brand.destaques?.length > 0 && (
                         <div className="flex flex-wrap gap-2 mb-5">
-                          {otherCats.map((oc) => (
+                          {brand.destaques.map((destaque) => (
                             <span
-                              key={oc.id}
+                              key={destaque}
                               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium"
-                              style={{ backgroundColor: `${getAccent(oc.id)}0a`, color: getAccent(oc.id), border: `1px solid ${getAccent(oc.id)}12` }}
+                              style={{ backgroundColor: `${accent}0a`, color: accent, border: `1px solid ${accent}12` }}
                             >
-                              {oc.titulo}
+                              {destaque}
                             </span>
                           ))}
                         </div>
